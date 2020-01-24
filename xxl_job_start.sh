@@ -23,4 +23,4 @@ cp xxl-job-admin/target/xxl-job-admin-2.2.0-SNAPSHOT.jar ~/task
 
 echo "start app ..."
 cd ~/task
-java -XX:MetaspaceSize=64m -XX:MaxMetaspaceSize=64m -Xms96m -Xmx96m -Xmn64m -Xss256k -XX:SurvivorRatio=8 -Xloggc:gc.log:wq  -jar xxl-job-admin-2.2.0-SNAPSHOT.jar
+java -XX:MetaspaceSize=64m -XX:MaxMetaspaceSize=64m -Xms96m -Xmx96m -Xmn64m -Xss256k -XX:SurvivorRatio=8 -Xloggc:gc.log  -jar xxl-job-admin-2.2.0-SNAPSHOT.jar
