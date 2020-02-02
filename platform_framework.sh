@@ -32,3 +32,5 @@ cd ~/admin
 /home/admin/admin/apache-tomcat-9.0.30/bin/startup.sh
 
 echo "deploy done !"
+
+
