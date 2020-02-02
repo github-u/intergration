@@ -9,6 +9,18 @@ mvn clean package -DskipTests=true
 echo "stop app ..."
 /home/admin/admin/apache-tomcat-9.0.30/bin/shutdown.sh
 
+for (( i=1; i <= 600; i+=1))
+do 
+   pid=$(ps aux |grep tomcat  | grep -v 'grep' | awk '{print $2}')
+   if [ "x$pid" == "x" ] ; 
+   then  
+      break
+  else  
+    echo "stop tomcat in $i senconds"; 
+    sleep 1
+  fi
+done
+
 echo "start remove old target ..."
 rm -rf ~/admin/apache-tomcat-9.0.30/webapps/platform*
 
