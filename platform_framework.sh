@@ -10,7 +10,7 @@ echo "stop app ..."
 /home/admin/admin/apache-tomcat-9.0.30/bin/shutdown.sh
 
 pid=$(ps aux |grep tomcat  | grep -v 'grep' | awk '{print $2}')
-kill -15 $pid
+kill -9 $pid
 for (( i=1; i <= 600; i+=1))
 do 
    if [ "x$pid" == "x" ] ; 
@@ -32,4 +32,4 @@ echo "start app ..."
 cd ~/admin
 /home/admin/admin/apache-tomcat-9.0.30/bin/startup.sh
 
-echo "deploy start..." 
+echo "deploy start......" 
