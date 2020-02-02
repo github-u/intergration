@@ -10,7 +10,7 @@ echo "stop app ..."
 /home/admin/admin/apache-tomcat-9.0.30/bin/shutdown.sh
 
 pid=$(ps aux |grep tomcat  | grep -v 'grep' | awk '{print $2}')
-if [ "x$pid" != "x"] ;
+if [ "x$pid" != "x" ] ;
   then kill -9 $pid
 fi
 
